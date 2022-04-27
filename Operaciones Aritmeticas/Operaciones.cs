@@ -12,7 +12,7 @@ namespace OperacionesAritmeticas
     /// Descripcion:Esta clase realiza cuatro operacions aritmeticas + - * /.
     /// Fecha: 20/04/22
     /// </summary>
-    public class OperacionesAritmeticas
+    public class Operaciones
     {
         int num1;
         int num2;
@@ -22,7 +22,7 @@ namespace OperacionesAritmeticas
         int resDiv;
 
         //Constructor. Debe ir vacío para permitir que se ejecute el código.
-        public OperacionesAritmeticas()
+        public Operaciones()
         {
             
         }
@@ -59,7 +59,7 @@ namespace OperacionesAritmeticas
         {
             num1 = 8;
             num2 = 2;
-            resDiv = num1 + num2;
+            resDiv = num1 / num2;
             Console.WriteLine("El resultado es: " + resDiv);
         }
 
