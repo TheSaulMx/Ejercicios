@@ -6,187 +6,151 @@ using System.Threading.Tasks;
 
 namespace CineApp
 {
-    public class Info : VarModel
+    public class Info : Variables 
     {
 
         public Info()
         {
-
         }
 
- 
-        public void InfoPersona()
-        {
-
+        public string NomPersona()
+        { 
             Console.WriteLine("Ingrese su nombre:");
-
-            name = Console.ReadLine();
+            Nombre = Console.ReadLine();
 
             Console.Clear();
-
-            Console.WriteLine($"Bienvenido, {name}!");
+            Console.WriteLine($"Bienvenido, {Nombre}!");
             Console.WriteLine("=================");
             Console.WriteLine();
 
+            return Nombre;
         }
 
-        
-
-        public void InfoPelicula()
+        public int EdadPersona()
         {
-            string mensaje = "La película que seleccionaste es:";
-
             Console.WriteLine("¿Cuál es tu edad?");
+            Edad = Convert.ToInt16(Console.ReadLine());
 
-            edad = Convert.ToInt16(Console.ReadLine());
+            return Edad;
+        }
 
-            Console.Clear();
-            if (edad >= 18)
-            {
-                Console.WriteLine("Películas disponibles para ti");
+        public int Cartelera()
+        {
+            string mensaje = $"Hola, {Nombre}, las películas disponibles para ti son:";
+            
+            if (Edad >= 18) 
+            { 
+                Console.Clear();
+                Console.WriteLine(mensaje);
                 Console.WriteLine();
+
                 Console.WriteLine("1.- Avengers");
                 Console.WriteLine("2.- DeadPool");
                 Console.WriteLine("3.- PawPatrol");
-
-                Console.WriteLine();
-                Console.WriteLine("Ingresa el número correspondiente a la película que deseas ver:");
-
-                idpelicula = Convert.ToInt16(Console.ReadLine());
-
-
-
-                if (idpelicula == 1)
-                {
-                    
-                    Console.Clear();
-                    Console.WriteLine($"Bienvenido, {name}!");
-                    Console.WriteLine("=================");
-                    Console.WriteLine();
-                    Console.WriteLine($"{mensaje} Avengers");
-
-                }
-                else if (idpelicula == 2)
-                {
-                    Console.Clear();
-                    Console.WriteLine($"Bienvenido, {name}!");
-                    Console.WriteLine("=================");
-                    Console.WriteLine();
-                    Console.WriteLine($"{mensaje} DeadPool");
-                }
-                else if (idpelicula == 3)
-                {
-                    Console.Clear();
-                    Console.WriteLine($"Bienvenido, {name}!");
-                    Console.WriteLine("=================");
-                    Console.WriteLine();
-                    Console.WriteLine($"{mensaje} PawPatrol");
-                }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine($"Bienvenido, {name}!");
-                    Console.WriteLine("=================");
-                    Console.WriteLine();
-                    Console.WriteLine("Número de película invalido");
-                }
-
-
             }
-
-            if (edad >= 10)
+                       
+            else if (Edad < 18)
             {
-                Console.WriteLine("Películas disponibles para ti");
+                Console.Clear();
+                Console.WriteLine(mensaje);
                 Console.WriteLine();
+
                 Console.WriteLine("1.- Avengers");
                 Console.WriteLine("2.- PawPatrol");
-
-                Console.WriteLine();
-                Console.WriteLine("Ingresa el número correspondiente a la película que deseas ver:");
-
-                idpelicula = Convert.ToInt16(Console.ReadLine());
-
-
-
-                if (idpelicula == 1)
-                {
-
-                    Console.Clear();
-                    Console.WriteLine($"Bienvenido, {name}!");
-                    Console.WriteLine("=================");
-                    Console.WriteLine();
-                    Console.WriteLine($"{mensaje} Avengers");
-
-                }
-                else if (idpelicula == 2)
-                {
-                    Console.Clear();
-                    Console.WriteLine($"Bienvenido, {name}!");
-                    Console.WriteLine("=================");
-                    Console.WriteLine();
-                    Console.WriteLine($"{mensaje} PawPatrol");
-                }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine($"Bienvenido, {name}!");
-                    Console.WriteLine("=================");
-                    Console.WriteLine();
-                    Console.WriteLine("Número de película invalido");
-                }
-
-
             }
 
-            if (edad <= 10)
-            {
-                Console.WriteLine("La pelíccula disponible para ti es:");
-                Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Ingresa el número correspondiente a la película que deseas ver:");
 
-                Console.WriteLine("1.- PawPatrol");
-
-                Console.WriteLine();
-                Console.WriteLine("Ingresa el número correspondiente a la película");
-
-                idpelicula = Convert.ToInt16(Console.ReadLine());
-
-
-
-                if (idpelicula == 1)
-                {
-                    Console.Clear();
-                    Console.WriteLine($"Bienvenido, {name}!");
-                    Console.WriteLine("=================");
-                    Console.WriteLine();
-                    Console.WriteLine($"{mensaje} PawPatrol");
-                }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine($"Bienvenido, {name}!");
-                    Console.WriteLine("=================");
-                    Console.WriteLine();
-                    Console.WriteLine("Número de película invalido");
-                }
-
-
-            }
-
+            IdPelicula = Convert.ToInt16(Console.ReadLine());
+            return IdPelicula;
 
         }
-
-        public void Confirmación()
+        
+        public string SelecPelicula()
         {
-            Console.WriteLine($"La película seleccionada es {nomPelicula}");
-            Console.WriteLine($"¿Es correcto?");
+            Console.Clear();
+            string mensaje = "La película seleccionada es: ";
+            string Avengers = "Avengers";
+            string DeadPool = "DeadPool";
+            string PawPatrol = "PawPatrol";
+
+            if (Edad >= 18)
+            {
+
+                if (IdPelicula == 1)
+                {
+                    PeliSelec = Avengers;
+                }
+
+                else if (IdPelicula == 2)
+                {
+                    PeliSelec = DeadPool;
+                }
+
+                else if (IdPelicula == 3)
+                {
+                    PeliSelec = PawPatrol;
+                }
+                else 
+                {
+                    Cartelera();
+                    SelecPelicula();
+                }
+
+            }
+            if (Edad < 18)
+            {
+
+                if (IdPelicula == 1)
+                {
+                    PeliSelec = Avengers;
+                }
+
+                else if (IdPelicula == 2)
+                {
+                    PeliSelec = PawPatrol;
+                }
+                else
+                {
+                    Cartelera();
+                    SelecPelicula();
+                }
+
+            }
+
+
+            Console.WriteLine($"{mensaje} {PeliSelec}");
+            return PeliSelec;
 
         }
 
+        public void Confirmacion()
+        {
+            string y = "y";
+            Console.Clear();
+            Console.WriteLine($"{Nombre}, has seleccionado la película {PeliSelec}");
+            Console.WriteLine();
+            Console.WriteLine("¿Es correcto? y/n");
 
+            Cancelar = Console.ReadLine();
+
+            if (Cancelar == y)
+            {
+                Console.Clear();
+                Console.WriteLine("================================");
+                Console.WriteLine("| ¡¡Que disfrutes la función!! |");
+                Console.WriteLine("================================");
+            }
+            else
+            {
+                Cartelera();
+                SelecPelicula();
+                Confirmacion();
+            }
+
+        }
 
     }
-
-   
-
 
 }
