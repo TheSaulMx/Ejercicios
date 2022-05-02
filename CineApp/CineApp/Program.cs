@@ -1,9 +1,9 @@
 ﻿using CineApp;
 
-Info informacion = new Info();
+Cine visitaCine = new Cine();
 
-informacion.NomPersona();
-informacion.EdadPersona();
-informacion.Cartelera();
-informacion.SelecPelicula();
-informacion.Confirmacion();
+visitaCine.NomPersona();
+visitaCine.EdadPersona();
+visitaCine.Cartelera();
+visitaCine.SelecPelicula();
+visitaCine.Confirmacion();

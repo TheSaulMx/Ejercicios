@@ -9,11 +9,11 @@ namespace CineApp
     public class Variables
     {
 
-        public string? Nombre { get; set; }
-        public int Edad { get; set; }
-        public int IdPelicula { get; set; }
-        public string? PeliSelec { get; set; }
-        public string? Cancelar { get; set; }
+        public string? nombre { get; set; }
+        public int edad { get; set; }
+        public int idPelicula { get; set; }
+        public string? peliSelec { get; set; }
+        public string? cancelar { get; set; }
 
 
     }
