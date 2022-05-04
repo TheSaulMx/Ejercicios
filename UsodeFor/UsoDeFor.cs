@@ -36,16 +36,37 @@ namespace UsodeFor
         }
 
    
-        public void CompararParImpar()
+        //public void CompararParImpar()
+        //{
+        //    Console.WriteLine("Comparador de números pares e impares");
+        //    Console.WriteLine();
+            
+        //    for (int i = 1; i <= 50; i++)
+        //    {
+        //        if (i % 2 == 0) Console.WriteLine($"El número {i} es par");
+ 
+        //        else Console.WriteLine($"El número {i} es impar");
+        //    }
+
+        //    Console.WriteLine();
+        //    Console.WriteLine("Pulse cualquier tecla para el siguiente ejercicio.");
+        //    Console.ReadKey();
+        //    Console.Clear();
+        //}
+
+        
+
+        public void Comparar()
         {
             Console.WriteLine("Comparador de números pares e impares");
             Console.WriteLine();
-            
-            for (int i = 1; i <= 50; i++)
+
+            for (int i = 1; i <= 50; i++) 
             {
                 if (i % 2 == 0) Console.WriteLine($"El número {i} es par");
- 
-                else Console.WriteLine($"El número {i} es impar");
+
+                else if (i % 2 != 0) Console.WriteLine($"El número {i} es impar");
+
             }
 
             Console.WriteLine();
