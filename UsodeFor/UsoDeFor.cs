@@ -75,7 +75,6 @@ namespace UsodeFor
             Console.Clear();
         }
 
-
         public void TablaMultiplicar()
         {
             Console.WriteLine("Ingrese el número del que desa obtener la tabla");
