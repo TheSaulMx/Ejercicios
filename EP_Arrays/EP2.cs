@@ -17,43 +17,40 @@ namespace Arrays
 
         public EP2()
         {
-
+            
         }
-
-        string[,] nombres_edades = new string[5, 2];
-
-        public void SetInfo()
+        
+        public string[,] SetInfo()
         {
-            for (int i = 0; i < 1; i++)
+            string[,] nombres_edades = new string[5, 2];
+
+            for (int i = 0; i < 5; i++)
             {
-                for (int j = 0; j < 5; j++)
-                {
+
                     Console.WriteLine("Nombre");
-                    string nombre = Console.ReadLine();
+                    string? nombre = Console.ReadLine();
                     nombres_edades[i, 0] = nombre;
                     Console.WriteLine("Edad");
-                    string edad = Console.ReadLine();
-                    nombres_edades[j, 1] = edad;
-                }
+                    string? edad = Console.ReadLine();
+                    nombres_edades[i, 1] = edad;
 
             }
+            return nombres_edades;
         }
 
-        public void GetInfo()
+        public void GetInfo(string[,] nombresYedades)
         {
             Console.Clear();
-            
-            for (int i = 0; i < 1; i++)
+
+            for (int i = 0; i < 5; i++)
             {
-                for (int j = 0; j < 5; j++)
-                {
+
                     Console.Write("Nombre: ");
-                    Console.WriteLine(nombres_edades[i, 0]);
+                    Console.WriteLine(nombresYedades[i, 0]);
                     Console.Write("Edad: "); 
-                    Console.WriteLine(nombres_edades[j, 1]);
+                    Console.WriteLine(nombresYedades[i, 1]);
                     Console.WriteLine();
 
-                }
             }
             Console.ReadKey();
         }

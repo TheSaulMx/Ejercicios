@@ -9,8 +9,11 @@ EP1 alumnos = new EP1();
 //2 En un metodo bidimensional vas a pedir nombre y edades de cada uno de los alumnos y los vas a mostrar (5 alumnos)
 
 EP2 arreglo = new EP2();
-arreglo.SetInfo();
-arreglo.GetInfo();
+
+var setInfo = arreglo.SetInfo();
+
+//rreglo.SetInfo();
+arreglo.GetInfo(setInfo);
 
 //3 En un equipo de basquet bol vas anotar la cantidad de puntos que anoto cada jugador y depues los vas  aordenar de mayor a menor (5 alumnos)
 
