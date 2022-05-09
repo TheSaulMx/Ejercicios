@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 /// <summary>
 /// Autor: Saúl Contreras
 /// Fecha: 06/05/22
-/// Ejercicio: Propuesto:En un arreglo de 10 alumnos vas a pedir los nombre de cada uno de ellos usando un metodo recursivo y al final los vas mostrar
+/// Ejercicio Propuesto: En un arreglo de 10 alumnos vas a pedir los nombre de cada uno de ellos usando un metodo recursivo y al final los vas mostrar
 /// </summary>
 
 namespace Arrays
@@ -17,6 +17,8 @@ namespace Arrays
 
         public EP1()
         {
+            Console.WriteLine("En un arreglo de 10 alumnos vas a pedir los nombre de cada uno de ellos usando un metodo recursivo y al final los vas mostrar.");
+            Console.WriteLine();
         }
 
         string[] alumnos = new string[10];
@@ -27,6 +29,7 @@ namespace Arrays
         public void PedirNombre()
         {
 
+            
 
             if (i < alumnos.Length)
             {
@@ -53,7 +56,9 @@ namespace Arrays
                 Console.WriteLine($"Nombre del alumno {contador}: {alumnos[j]}");
                 contador++;
             }
+            Console.ReadKey();
         }
+        
 
     }
 

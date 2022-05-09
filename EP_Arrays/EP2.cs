@@ -17,7 +17,8 @@ namespace Arrays
 
         public EP2()
         {
-            
+            Console.WriteLine("En un metodo bidimensional vas a pedir nombre y edades de cada uno de los alumnos y los vas a mostrar (5 alumnos)");
+            Console.WriteLine();
         }
         
         public string[,] SetInfo()
@@ -45,11 +46,9 @@ namespace Arrays
             for (int i = 0; i < 5; i++)
             {
 
-                    Console.Write("Nombre: ");
-                    Console.WriteLine(nombresYedades[i, 0]);
-                    Console.Write("Edad: "); 
-                    Console.WriteLine(nombresYedades[i, 1]);
-                    Console.WriteLine();
+                Console.WriteLine($"Nombre: {nombresYedades[i, 0]}");
+                Console.WriteLine($"Edad: {nombresYedades[i,1]} años"); 
+                Console.WriteLine();
 
             }
             Console.ReadKey();
