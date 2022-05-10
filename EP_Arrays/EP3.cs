@@ -91,8 +91,7 @@ namespace Arrays
                 timer.Start();
                 int valorAnterior;
                 string jugadorAnterior;
-                var lista = puntajes as List<string>;
-                lista.OrderBy()
+                
                 for (int j = 0; j < 5; j++)
                 {
                     for (int i = 0; i < 4; i++) //michael jordan 
