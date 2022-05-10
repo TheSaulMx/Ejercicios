@@ -1,12 +1,12 @@
 ﻿
 using Arrays;
 
-namespace Selector
-{
-     class SelectorEjercicos
-    {
-        static void Main(string[] args)
-        {
+//namespace Selector
+//{
+//     class SelectorEjercicos
+//    {
+//        static void Main(string[] args)
+//        {
 
 
             Console.WriteLine("Qué ejercicio desea consultar?");
@@ -32,7 +32,7 @@ namespace Selector
                     EP3 marcador = new EP3();
 
                     var marcadorFinal = marcador.ObtenerDatos();
-                    marcador.MarcadorFinal(marcadorFinal);
+                    marcador.CreaMarcadores(marcadorFinal);
                     break;
 
                 case 4:
@@ -47,11 +47,11 @@ namespace Selector
                     break;
             }
 
-        }
+//        }
 
-    }
+//    }
 
-}
+//}
 
 
 ////1 En un arreglo de 10 alumnos vas a pedir los nombre de cada uno de ellos usando un metodo recursivo y al final los vas mostrar
